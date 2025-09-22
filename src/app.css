@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@font-face {
+  font-family: "Inter";
+  src: url("/static/Inter.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@theme {
+    --color-bg: white;
+    --color-gradient-bg: #020202;
+    --font-mono: "Inter", sans;
+}
+
+@layer utilities {
+    .animate-slide-in {
+        @apply opacity-0 translate-y-8 transition-all duration-700;
+    }
+    .in-view.animate-slide-in {
+        @apply opacity-100 translate-y-0;
+    }
+}
